@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/icon" href="../logo.jpeg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-color: #000000;
+            color: white;
+            align-items: center;
+            font-size: 16px;
+        }
+        .nav2{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .entire{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 80vh;
+        }
+        .mainContainer{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 70px;
+            align-items: flex-start;
+            justify-content: center;
+            align-self: center;
+            animation: tarun2 2s linear;
+        }
+        input{
+            width: 90%;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid black;
+        }
+        input:focus{
+            outline: none;
+        }
+        .btn{
+            padding: 10px 25px;
+            font-size: 16px;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            border: none;
+        }
+        #signup{
+            display: none;
+        }
+        .img img{
+            width: 40rem;
+        }
+        @keyframes tarun1 {
+            from {
+                opacity: 0;
+                transform: translateY(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes tarun2 {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        button{
+            transition: transform 0.3s ease;
+        }
+        button:hover{
+            transform: translateY(-3px) translateX(-3px);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <p>Me Shop</p>
+        </div>
+        <div class="nav2">
+            <a href="#" id="shop">Shop <i class="material-icons">shopping_bag</i></a>
+            <a href="#" id="cart">MyCart <i class="material-icons">shopping_cart</i></a>
+            <a href="../signup/Signup.html">SignUp <i class="material-icons">person</i></a>
+            <a href="#" id="profile">Profile <i class="material-icons">account_circle</i></a>
+        </div>
+    </nav>
+    <div class="entire">
+        <div class="img" style="animation: tarun1 2s linear;">
+            <img src="./login.svg" alt="login">
+        </div>
+        <div class="mainContainer">
+            <h1 style="display: flex;align-items: center;">Login <i class="material-icons" style="font-size: 35px;">person</i></h1>
+            <input type="email" placeholder="Email" id="email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login" class="btn">Login</button>
+            <a href="../signup/Signup.html" id="signup" class="btn">Sign Up</a>
+            <div id="error" style="color: red;"></div>
+        </div>
+    </div>
+
+    <script src="./login.js"></script>
+</body>
+</html>

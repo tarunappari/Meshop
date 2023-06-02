@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Shop</title>
+    <link rel="icon" type="image/icon" href="./logo.jpeg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-color: #000000;
+            color: white;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .nav2 {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        h1 {
+            padding: 50px;
+            font-size: 50px;
+        }
+
+        .mainContainer {
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 40% 60%;
+            gap: 30px;
+        }
+
+        img {
+            width: 45rem;
+            position: relative;
+            right: -100px;
+        }
+
+        .btnDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .login {
+            padding: 12px 33px;
+            font-size: 16px;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            margin-left: 50px;
+            animation: tarun 2s linear;
+        }
+
+        .signup {
+            padding: 10px 30px;
+            font-size: 16px;
+            background-color: white;
+            color: #000000;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin-left: 50px;
+            font-weight: 600;
+            animation: tarun1 2s linear;
+        }
+
+        #error {
+            margin-left: 50px;
+            font-size: 18px;
+        }
+
+        .btnDiv img {
+            width: 23rem;
+
+        }
+        button{
+            transition: transform 0.3s ease;
+        }
+        button:hover{
+            transform: translateY(-3px) translateX(-3px);
+        }
+        @keyframes tarun {
+            from {
+                background-color: rgb(1, 1, 1, 0);
+                color: rgb(255, 255, 255, 0);
+                transform: translateX(-200px);
+            }
+
+            to {
+                background-color: rgb(1, 1, 1, 0.8);
+                color: rgb(255, 255, 255, 0.9);
+                transform: translateX(0);
+            }
+        }
+        @keyframes tarun1 {
+            from {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes tarun2 {
+            from {
+                opacity: 0;
+                transform: translateY(-200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <p>Me Shop</p>
+        </div>
+        <div class="nav2">
+            <a href="#" id="shop">Shop <i class="material-icons">shopping_bag</i></a>
+            <a href="#" id="cart">MyCart <i class="material-icons">shopping_cart</i></a>
+            <a href="#" id="profile">Profile <i class="material-icons">account_circle</i></a>
+        </div>
+    </nav>
+    <div class="mainContainer">
+        <div class="btnDiv">
+            <h1 style="animation: tarun2 2s linear;">Me Shop.</h1>
+            <button id="Login" class="login">Login</button>
+            <button id="SignUp" class="signup">SignUp</button>
+            <div id="error" style="color: red;"></div>
+            <img src="./land.png" alt="img" style="animation: tarun2 2s linear;">
+        </div>
+        <div class="divImg">
+            <img src="./cart.png" alt="cartimg" style="animation: tarun2 2s linear;">
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

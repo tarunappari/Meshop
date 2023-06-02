@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" type="image/icon" href="../logo.jpeg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-color: #000000;
+            color: white;
+            align-items: center;
+            font-size: 16px;
+        }
+
+        .nav2 {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .pass,
+        .info {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        .my,
+        .edit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 25px;
+            margin: auto;
+            width: 80%;
+            align-self: center;
+        }
+
+        input {
+            padding: 10px 20px;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 16px;
+            width: 80%;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            background-color: #000000;
+            color: white;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .my h1,
+        .edit h1 {
+            position: relative;
+            left: 25%;
+        }
+
+        .img img {
+            width: 30rem;
+            height: 25rem;
+            align-self: center;
+        }
+
+        @keyframes tarun1 {
+            from {
+                opacity: 0;
+                transform: translateX(-200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes tarun2 {
+            from {
+                opacity: 0;
+                transform: translateX(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .cart {
+            position: relative;
+        }
+
+        .cart span {
+            background-color: white;
+            color: black;
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 50%;
+            right: -5px;
+            top: -5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        button{
+            transition: transform 0.3s ease;
+        }
+        button:hover{
+            transform: translateY(-3px) translateX(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <p>Me Shop</p>
+        </div>
+        <div class="nav2">
+            <a href="../shop/shop.html" id="shop">Shop <i class="material-icons">shopping_bag</i></a>
+            <a href="../cart/cart.html" id="cart">MyCart <i class="material-icons cart">shopping_cart <span id="cartcount">0</span></i></a>
+        </div>
+    </nav>
+    <div class="info">
+        <div class="my" style="animation: tarun1 2s linear;">
+            <h1>My Profile</h1>
+            <input type="text" id="fname" placeholder="First Name">
+            <input type="text" id="lname" placeholder="Last Name">
+            <div id="mysuccess"></div>
+            <button id="save">Save Info</button>
+        </div>
+        <div class="img" style="animation: tarun2 2s linear;">
+            <img src="./info.png" alt="img" style="padding-left: 60px;">
+        </div>
+    </div>
+    <div class="pass" style="margin-bottom: 30px;">
+        <div class="img" style="animation: tarun1 2s linear;">
+            <img src="./pchange.png" alt="img" style="padding-left: 60px;">
+        </div>
+        <div class="edit" style="animation: tarun2 2s linear;">
+            <h1>Edit Password</h1>
+            <input type="password" id="oldpassword" placeholder="Old Password">
+            <input type="password" id="p1" placeholder="New Password">
+            <input type="password" id="p2" placeholder="Confirm Password">
+            <div id="passwordsuccess"></div>
+            <button id="change-btn">Change Password</button>
+            <button id="logout">Logout</button>
+        </div>
+    </div>
+
+    <script src="./profile.js"></script>
+</body>
+
+</html>

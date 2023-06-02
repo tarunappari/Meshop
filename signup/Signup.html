@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="icon" type="image/icon" href="../logo.jpeg">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 40px;
+            background-color: #000000;
+            color: white;
+            align-items: center;
+            font-size: 16px;
+        }
+        .nav2{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .entirediv{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            width: 90vw;
+        }
+        .pic{
+            display: flex;
+            width: 50%;
+        }
+        .pic img{
+            width: 35rem;
+            height: 35rem;
+            align-self: center;
+        }
+        .container{
+            height: 65vh;
+            padding: 100px;
+            animation: tarun1 2s linear;
+        }
+        form{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        form h1{
+            padding: 10px;
+        }
+        form input{
+            width: 90%;
+            padding: 10px 20px;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 16px;
+        }
+        input:focus{
+            outline: none;
+        }
+        form .btn{
+            padding: 10px 20px;
+            font-size: 15px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px
+        }
+        form #login{
+            display: none;
+        }
+        .makeflex{
+            display: flex;
+            gap: 10px;
+        }
+        .makeflex i{
+            font-size: 40px;
+        }
+        @keyframes tarun1 {
+            from {
+                opacity: 0;
+                transform: translateY(200px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes tarun2 {
+            from {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        button{
+            transition: transform 0.3s ease;
+        }
+        button:hover{
+            transform: translateY(-3px) translateX(-3px);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <p>Me Shop</p>
+        </div>
+        <div class="nav2">
+            <a href="#" id="shop">Shop <i class="material-icons">shopping_bag</i></a>
+            <a href="#" id="cart">MyCart <i class="material-icons">shopping_cart</i></a>
+            <a href="../login/login.html">Login <i class="material-icons">person</i></a>
+            <a href="#" id="profile">Profile <i class="material-icons">account_circle</i></a>
+        </div>
+    </nav>
+    <div class="entirediv">
+        <div class="container">
+            <form>
+                <h1 class="makeflex">Sign Up <i class="material-icons">account_circle</i></h1>
+                <input type="text" placeholder="Fisrt name" id="fname">
+                <input type="text" placeholder="last name" id="lname">
+                <input type="email" placeholder="Email" id="email">
+                <input type="text"  id="p1" placeholder="Password">
+                <input type="password"  id="p2" placeholder="Confirm Password">
+                <div><button id="signup-btn" class="btn">Sign Up</button>
+                <a href="../login/login.html" id="login" class="btn">Login</a></div>
+                <div id="error" style="color: red;"></div>
+            </form>
+        </div>
+        <div class="pic" style="animation: tarun2 2s linear;">
+            <img src="./sign.webp" alt="img">
+        </div>
+    </div>
+
+    <script src="./Signup.js"></script>
+</body>
+</html>
