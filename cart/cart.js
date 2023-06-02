@@ -9,7 +9,6 @@ let total ;
 
 
 addproducts(cartProducts);
-
 function addproducts(cartProducts) {
     total = 0;
     document.getElementById('cartcount').innerText = cartProducts.length;
@@ -44,21 +43,24 @@ function addproducts(cartProducts) {
                 // <div><span>1.shirt</span><span>$100</span></div>
                 let div = document.createElement('div');
                 div.innerHTML = `<div><span style="width: 80%;">${++i}.${item.title}</span><span style="width: 15%;">$${item.price}</span></div>`;
-                total = total + item.price;
+                total += item.price;
                 productslist.appendChild(div);
             }
         })
     })
 
-    spanTotal.innerText = `Rs. ${Math.floor((total*100)*75)}`;
+
+    spanTotal.innerText = `$${Math.floor(total)}`;
 
     if (cartProducts.length === 0) {
         cartitems.innerHTML = `<div id="emptyh1" style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
                                <h1>Your cart is empty Shop now</h1>
                                <img src="../empty.png" alt="img" style="width:30rem;height:30rem;">
                                 </div>`
+        spanTotal.innerText = 0;
     }
 }
+
 
 function removefromcart(event) {
     const id = event.target.dataset.productId;
@@ -79,7 +81,7 @@ function removefromcart(event) {
 function clearcart() {
         var options = {
             key: "rzp_test_PV1oQ0oMtgXOsq", // Enter the Key ID generated from the Dashboard
-            amount: (total*100)*75, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            amount: ((total*100)*75), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             currency: "INR",
             name: "MyShop Checkout",
             description: "This is your order", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
