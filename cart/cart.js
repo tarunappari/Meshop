@@ -54,7 +54,7 @@ function addproducts(cartProducts) {
     if (cartProducts.length === 0) {
         cartitems.innerHTML = `<div id="emptyh1" style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
                                <h1>Your cart is empty Shop now</h1>
-                               <img src="./empty.png" alt="img" style="width:30rem;height:30rem;">
+                               <img src="../empty.png" alt="img" style="width:30rem;height:30rem;">
                                 </div>`
     }
 }
