@@ -22,9 +22,9 @@ function addproducts(cartProducts) {
                 div.innerHTML = `<div class="imgdiv">
                                      <img class="img" src=${item.image} alt="shirt">
                                  </div>
-                                 <div style="width: 200px;">Title : ${item.title}</div>
+                                 <div style="width: 200px;"><b>Title : ${item.title}</b></div>
                                         <div class="ps">
-                                            <span>Price : $${item.price}</span>
+                                            <span>Price : </b>$${item.price}</b></span>
                                          </div>
                                  <button class="removeFromCartButton" data-product-id="${item.id}">Remove from cart</button>`;
                 cartitems.appendChild(div);
