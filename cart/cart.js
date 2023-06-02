@@ -5,12 +5,13 @@ let products = JSON.parse(localStorage.getItem('products'));
 let cartitems = document.getElementById('Cartitems');
 let productslist = document.getElementById('Productslist');
 let spanTotal = document.getElementById('spanTotal')
-let total = 0;
+let total ;
 
 
 addproducts(cartProducts);
 
 function addproducts(cartProducts) {
+    total = 0;
     document.getElementById('cartcount').innerText = cartProducts.length;
     cartitems.innerHTML = ''
 
