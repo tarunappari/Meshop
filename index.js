@@ -28,7 +28,7 @@ document.getElementById("shop").addEventListener("click",()=>{
 document.getElementById("Login").addEventListener("click",(e)=>{
     e.preventDefault()
     let link = document.createElement('a');
-    link.href = './login.html';
+    link.href = './login/login.html';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link)
@@ -38,7 +38,7 @@ document.getElementById("Login").addEventListener("click",(e)=>{
 document.getElementById("SignUp").addEventListener("click",(e)=>{
     e.preventDefault();
     let link = document.createElement('a');
-    link.href = './Signup.html';
+    link.href = './signup/Signup.html';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link)
