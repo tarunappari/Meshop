@@ -60,9 +60,9 @@ function addProducts(products) {
             item.sizes = sizes;
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                             <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                                  <span>${sizes}</span>
                              </div>
                              <div>Colors : ${colors}</div>
@@ -83,9 +83,9 @@ function addProducts(products) {
             item.sizes = sizes;
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                             <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                                  <span>${sizes}</span>
                              </div>
                              <div>Colors : ${colors}</div>
@@ -102,9 +102,9 @@ function addProducts(products) {
             div.className = 'card';
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                            <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                              </div>
                              <div>Rating : ${item.rating.rate} </div>
                              <button class="addToCartButton" data-product-id="${item.id}">Add To Cart</button>`;
@@ -119,9 +119,9 @@ function addProducts(products) {
             div.className = 'card';
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                            <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                              </div>
                              <div>Rating : ${item.rating.rate} </div>
                              <button class="addToCartButton" data-product-id="${item.id}">Add To Cart</button>`;
@@ -144,9 +144,9 @@ function addSpecific(item, container) {
         div.className = 'card';
         div.innerHTML = `<div class="imgdiv">
                                  <img class="img" src=${item.image} alt="img"></div>
-                                 <div style="width: 200px;">${item.title}</div>
-                                 <div class="ps">
-                                     <span>$${item.price}</span>
+                                 <div style="width: 200px;"><b>${item.title}</b></div>
+                             <div class="ps">
+                                 <span><b>$${item.price}</b></span>
                                  </div>
                                  <div>Rating : ${item.rating.rate} </div>
                                  <button class="addToCartButton" data-product-id="${item.id}">Add To Cart</button>`;
@@ -162,9 +162,9 @@ function addSpecific(item, container) {
         let colors = randomColor();
         div.innerHTML = `<div class="imgdiv">
                                  <img class="img" src=${item.image} alt="img"></div>
-                                 <div style="width: 200px;">${item.title}</div>
-                                 <div class="ps">
-                                     <span>$${item.price}</span>
+                                <div style="width: 200px;"><b>${item.title}</b></div>
+                             <div class="ps">
+                                 <span><b>$${item.price}</b></span>
                                      <span>${sizes}</span>
                                  </div>
                                  <div>Colors : ${colors}</div>
@@ -329,9 +329,9 @@ menbtn.addEventListener('click', () => {
             let colors = randomColor();
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                             <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                                  <span>${sizes}</span>
                              </div>
                              <div>Colors : ${colors}</div>
@@ -376,9 +376,9 @@ womenbtn.addEventListener('click', () => {
             let colors = randomColor();
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                            <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                                  <span>${sizes}</span>
                              </div>
                              <div>Colors : ${colors}</div>
@@ -421,9 +421,9 @@ jewellerybtn.addEventListener('click', () => {
             div.className = 'card';
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                             <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                              </div>
                              <div>Rating : ${item.rating.rate} </div>
                              <button class="addToCartButton" data-product-id="${item.id}">Add To Cart</button>`;
@@ -463,9 +463,9 @@ electronicsbtn.addEventListener('click', () => {
             div.className = 'card';
             div.innerHTML = `<div class="imgdiv">
                              <img class="img" src=${item.image} alt="img"></div>
-                             <div style="width: 200px;">${item.title}</div>
+                            <div style="width: 200px;"><b>${item.title}</b></div>
                              <div class="ps">
-                                 <span>$${item.price}</span>
+                                 <span><b>$${item.price}</b></span>
                              </div>
                              <div>Rating : ${item.rating.rate} </div>
                              <button class="addToCartButton" data-product-id="${item.id}">Add To Cart</button>`;
