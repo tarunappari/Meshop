@@ -42,7 +42,7 @@ let jewellery = document.getElementById('jewellery');
 let electronics = document.getElementById('electronics');
 
 let products = JSON.parse(localStorage.getItem('products'));
-
+document.getElementById('emptySearch').style.display = 'none';
 
 //redenering every product to the shop
 addProducts(products);
