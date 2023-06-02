@@ -24,7 +24,7 @@ function addproducts(cartProducts) {
                                  </div>
                                  <div style="width: 200px;"><b>Title : ${item.title}</b></div>
                                         <div class="ps">
-                                            <span>Price : </b>$${item.price}</b></span>
+                                            <span><b>Price : $${item.price}</b></span>
                                          </div>
                                  <button class="removeFromCartButton" data-product-id="${item.id}">Remove from cart</button>`;
                 cartitems.appendChild(div);
