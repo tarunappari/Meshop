@@ -1,11 +1,11 @@
 
-(async function () {
+async function getProducts() {
     let url = `https://fakestoreapi.com/products`;
 
     let response = await fetch(url)
     let products = await response.json();
     localStorage.setItem('products', JSON.stringify(products));
-})();
+};
 
 function randomColor() {
     var colors = ['red', 'blue', 'green', 'black', 'white'];

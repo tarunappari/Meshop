@@ -87,7 +87,7 @@ login.addEventListener("click",(e)=>{
         }
     }
     else{
-        error.innerText = 'Error : You didnt have an account please sign un';
+        error.innerText = 'Error : You didnt have an account please sign up';
         document.getElementById('signup').style.display = "inline";
         return;
     }

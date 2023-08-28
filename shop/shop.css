@@ -110,16 +110,16 @@ input:focus{
 #men-btn,#women-btn,#jewellery-btn,#electronics-btn{
     background-color: #fff;
     border: 1px solid black;
-    padding: 10px 80px;
-    border-radius: 5px;
+    padding: 0.9rem 4rem ;
+    border-radius: 0.4rem;
     font-size: 17px;
     font-weight: 500;
 }
 #all{
     background-color: #000000;
     color: white;
-    padding: 10px 80px;
-    border-radius: 5px;
+    padding: 0.9rem 4rem ;
+    border-radius: 0.4rem;
     font-size: 17px;
     font-weight: 500;
     border: 1px solid black;
@@ -216,4 +216,14 @@ button{
 }
 button:hover{
     transform: translateY(-3px) translateX(-3px);
+}
+
+::-webkit-scrollbar {
+    width: 0.3rem;  /* Width of the scrollbar */
+}
+
+/* Styling the thumb part of the scrollbar */
+::-webkit-scrollbar-thumb {
+background-color:  rgb(99, 97, 97);/* Color of the scrollbar thumb */
+border-radius: 5px;      /* Rounded corners for the thumb */
 }

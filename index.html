@@ -51,12 +51,12 @@
             display: grid;
             grid-template-columns: 40% 60%;
             gap: 30px;
+            min-height: 50vh;
         }
 
-        img {
-            width: 45rem;
-            position: relative;
-            right: -100px;
+        .img {
+            width: 25rem;
+            padding-left: 10rem;
         }
 
         .btnDiv {
@@ -95,9 +95,13 @@
         }
 
         .btnDiv img {
-            width: 23rem;
-
+            width: 20rem;
+            position: absolute;
+            bottom: 8rem;
+            left: 15rem;
+            z-index: -1;
         }
+
         button{
             transition: transform 0.3s ease;
         }
@@ -155,14 +159,14 @@
     </nav>
     <div class="mainContainer">
         <div class="btnDiv">
-            <h1 style="animation: tarun2 2s linear;">Me Shop.</h1>
+            <h1 style="animation: tarun2 2s linear">Me Shop.</h1>
             <button id="Login" class="login">Login</button>
             <button id="SignUp" class="signup">SignUp</button>
             <div id="error" style="color: red;"></div>
-            <img src="./land.png" alt="img" style="animation: tarun2 2s linear;">
+            <img class="shopImg" src="./cart.png" alt="cartimg" style="animation: tarun2 2s linear;">
         </div>
         <div class="divImg">
-            <img src="./cart.png" alt="cartimg" style="animation: tarun2 2s linear;">
+            <img class="img"  src="./land.png" alt="img" style="animation: tarun2 2s linear">
         </div>
     </div>
 
