@@ -1,11 +1,14 @@
+let url = `https://fakestoreapi.com/products`;
+
+let products;
 
 async function getProducts() {
-    let url = `https://fakestoreapi.com/products`;
-
     let response = await fetch(url)
-    let products = await response.json();
+    products = await response.json();
     localStorage.setItem('products', JSON.stringify(products));
-};
+}
+
+getProducts()
 
 function randomColor() {
     var colors = ['red', 'blue', 'green', 'black', 'white'];
@@ -41,8 +44,9 @@ let womencolthes = document.getElementById('womencolthes');
 let jewellery = document.getElementById('jewellery');
 let electronics = document.getElementById('electronics');
 
-let products = JSON.parse(localStorage.getItem('products'));
+products = JSON.parse(localStorage.getItem('products')) || products;
 document.getElementById('emptySearch').style.display = 'none';
+
 
 //redenering every product to the shop
 addProducts(products);
